@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PRP Method — Buy / Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body { font-family: Inter, sans-serif;  background: #f4f7fb; color: #111; }
+    /* .wrap { max-width: 900px; margin: auto; } */
+    .wrap {
+  max-width: 900px;
+  margin: 90px auto 40px auto;
+  padding: 0 16px;
+}
+    header { display:flex; gap:18px; align-items:center; }
+    header img { width:120px; height:120px; border-radius:14px; object-fit:cover; }
+    header h1 { margin:0; color:#1a237e; }
+    .card { background:#fff; padding:18px; border-radius:12px; box-shadow:0 10px 30px rgba(2,6,23,0.04); margin-top:18px; }
+    input { padding:10px; border-radius:10px; border:1px solid #e6eefc; width:100%; margin-top:8px; }
+    .btn { padding:10px 14px; border-radius:10px; border:0; cursor:pointer; font-weight:700; margin-top:10px; }
+    .btn.verify { background:#1a237e; color:#fff; }
+    .btn.wh { background:#fff; color:#1a237e; border:1px solid rgba(26,35,126,0.08); margin-left:8px; }
+    .download-btn { background:#cfe7d0; color:#37903c; padding:10px 14px; border-radius:10px; border:0; cursor:not-allowed; font-weight:700; margin-top:16px; transition:0.3s; }
+    .download-btn.unlocked { background:green; color:#fff; cursor:pointer; }
+    .small { font-size:13px; color:#68707a; }
+    .small li { margin-bottom: 12px; }
+    .wrap  { margin: 80px 20px 20px 20px; }
+    .back-home { display: flex; align-items: center; gap: 10px; position: fixed; width: 100%; background: #eee; padding: 10px; top: 0; cursor: pointer; }
+    .back-home i { font-size: 20px; }
+    .payment-list { background:#f7fbff; padding:12px; border-radius:10px; border:1px dashed #e1eefc; margin-top:10px; }
+    .payment-list li { margin-bottom:8px; }
+    .note { font-size:12px; color:#445; margin-top:8px; }
+
+    .hero {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;        /* vertical centering */
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+
+/* ---------- VIDEO ---------- */
+.video-wrap video {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 9 / 16;       /* vertical video */
+  border-radius: 16px;
+  background: #000;
+}
+
+/* Video container */
+.video-wrap {
+  flex: 0 1 200px;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Text area */
+.hero-text {
+  flex: 0 1 250px;
+  text-align: left;
+}
+
+/* 📱 Mobile fix */
+@media (max-width: 640px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-text {
+  flex: 1 1 360px;
+  text-align: left;
+}
+
+  .video-wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .video-wrap video {
+    max-height: 320px;
+  }
+}
+
+/* 📱 Mobile fix */
+@media (max-width: 640px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+
+
+  }
+
+  .video-wrap {
+    width: 100%;
+  }
+
+  .video-wrap video {
+    max-width: 100%;
+    max-height: 360px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+   <div class="back-home">
+    <a href="test.html" style="text-decoration:none;color:inherit"><i class="fa-solid fa-arrow-left"></i></a>
+    <p style="margin:0">Home</p>
+  </div>
+<div class="wrap">
+  <header class="hero">
+  <div class="video-wrap">
+    <video 
+      src="1215(1).mp4" 
+      controls 
+      playsinline 
+      poster=""
+    ></video>
+  </div>
+
+  <div class="hero-text">
+    <h1>Habka PRP</h1>
+    <div class="small">
+      waa tallaabo kaa caawin doonta inaad u hadasho si kalsooni aad wax usoo jeediso
+    </div>
+  </div>
+</header>
+
+  <div class="card">
+    <h3>Wax ku saabsan Habka P-R-P</h3>
+    <p class="small">The PRP Method gives practical steps for improving your speech structure, pauses, and confidence. This paid PDF will be delivered after verification.</p>
+
+    <h4>Sideed u iibsan kartaa?</h4>
+    <ol class="small">
+      <li>
+        Bixi lacagta
+        <!-- Added payment methods under item 1 -->
+        <ul class="payment-list">
+          <li><strong>EVC :</strong> *712*613413845*1#</li>
+          <li><strong>SAHAL :</strong> *883*0613413845*1#</li>
+          <li><strong>ZAAD :</strong> *880*0613413845*1#</li>
+          <li><strong>GOLIS :</strong> *110*623413845*1#</li>
+          <li><strong>JEEB :</strong> *812*683887140*1#</li>
+        </ul>
+      </li>
+      <li>inoo soo dir screenshotka lacagta taabo badhanka cagaaran.</li>
+      <li>Soo qaado gaadhka lacag bixinta geli kaadhka si uu kuugu furmo ka dib lasoo deg.</li>
+
+      <button class="btn wh" id="whBtn" style="background: #1bd224; color: #fff;"><i class="fa-brands fa-whatsapp" style="margin-right: 5px; font-size: 20px;"></i>soo dir screenshotka</button>
+    </ol>
+
+    <label class="small">Geli kaadhka lacag bixinta</label>
+    <input id="txInput" placeholder="halkaan geli kaadhka">
+    <div style="display:flex; gap:8px;">
+      <button class="btn verify" id="verifyBtn">Verify Code</button>
+    </div>
+
+    <!-- 🔒 Default locked button -->
+       <img src="istockphoto-1298834280-612x612.jpg" alt="PRP" style="width: 50px; margin-top: 30px; display:block;">
+   <!-- Inside your card, right below the download button -->
+<button id="downloadBtn" class="download-btn">🔒 Download PRP </button>
+<div id="msg" class="small" style="margin-top:8px;"></div>
+
+<!-- Warning message container -->
+<p id="warningMsg" class="small" style="color:#d32f2f; margin-top:8px; display:none;">
+⚠️DIGNIIN!  PDF kaan adaan kugu tala galnay kaadhkiisa . hadaad share gareeyso waxa dhici doonto PDF kaada inuu is xiro.
+</p>
+
+  </div>
+
+  <footer style="margin-top:18px;text-align:center;" class="small">
+    Contact: +252 683887140 | musab@example.com
+  </footer>
+</div>
+
+<script>
+  // back to home 
+
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzOrPWu70bJqLEncdsS1nIB-avlVz-JNk2f3Yr5fb2NWEmWwoNhXASJB7iM4tqiLZwMcw/exec";
+  const PRP_PDF = "hidden/prp.pdf"; // or Google Drive direct-download link
+  const WHATSAPP_NUMBER = "252683887140";
+
+  const txInput = document.getElementById('txInput');
+  const verifyBtn = document.getElementById('verifyBtn');
+  const downloadBtn = document.getElementById('downloadBtn');
+  const whBtn = document.getElementById('whBtn');
+  const msg = document.getElementById('msg');
+
+  // WhatsApp button
+  whBtn.addEventListener('click', () => {
+    const text = encodeURIComponent("ASC, Waan bixiyey lacagta.waa kan screenshotka:");
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
+  });
+
+  // Verify & delete flow
+verifyBtn.addEventListener('click', async () => {
+  const code = (txInput.value || "").trim();
+  if (!code) { 
+    msg.style.color = "red"; 
+    msg.textContent = "Please enter the payment code."; 
+    return; 
+  }
+
+  msg.style.color = "black"; 
+  msg.textContent = "Checking code...";
+
+  try {
+    const res = await fetch(`${APPS_SCRIPT_URL}?txid=${encodeURIComponent(code)}`);
+    const text = (await res.text()).trim();
+
+    if (text === "VALID") {
+      msg.style.color = "green";
+      msg.textContent = "✅ Code verified and disabled. Download unlocked.";
+
+      // Unlock download button
+      downloadBtn.classList.remove('locked');
+      downloadBtn.classList.add('unlocked');
+      downloadBtn.innerHTML = "⬇️ Download PRP PDF";
+
+      // Show warning message
+      document.getElementById('warningMsg').style.display = "block";
+
+    } else {
+      msg.style.color = "red";
+      msg.textContent = "❌ Invalid or already used code.";
+
+      downloadBtn.classList.remove('unlocked');
+      downloadBtn.innerHTML = "🔒 Download PRP PDF";
+
+      // Hide warning message if invalid
+      document.getElementById('warningMsg').style.display = "none";
+    }
+  } catch (err) {
+    console.error(err);
+    msg.style.color = "red";
+    msg.textContent = "⚠️ Error verifying code. Try again or contact support.";
+  }
+});
+
+
+  // Download button logic
+  downloadBtn.addEventListener('click', () => {
+    if (!downloadBtn.classList.contains('unlocked')) {
+      alert("Fadlan bixi lacagta ka dib inuu soo dir screenshotka si aan kuu siino kaadhka lacag bxinta si aad ula soo degto.");
+      return;
+    }
+    window.open(PRP_PDF, "_blank");
+  });
+
+
+
+</script>
+</body>
+</html>
