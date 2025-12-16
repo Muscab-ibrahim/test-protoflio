@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Musab — Public Speaking Coach</title>
+  <meta name="description" content="Musab — Public speaking coach. E-books, training, and resources." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root{
+      --main:#1a237e;
+      --accent:#f4c542;
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --radius:12px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    body{margin:0;background:var(--bg);color:#111;-webkit-font-smoothing:antialiased;}
+    .wrap{max-width:var(--maxw);margin:24px auto;padding:16px;}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-radius:12px;background:linear-gradient(90deg,#fff,#fbfdff);box-shadow:0 8px 28px rgba(11,61,145,0.04);position:sticky;top:10px;z-index:50}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:56px;height:56px;border-radius:14px;object-fit:cover;box-shadow:0 8px 20px rgba(11,61,145,0.06)}
+    .brand h1{font-size:18px;margin:0;color:var(--main)}
+    nav{display:flex;gap:16px;align-items:center}
+    nav a{color:var(--main);text-decoration:none;font-weight:600}
+    .hamburger{display:none;border:0;background:transparent;cursor:pointer;padding:8px}
+
+    .hero{display:flex;gap:28px;align-items:center;margin-top:20px;flex-wrap:wrap}
+    .hero-left{width:280px;min-width:240px}
+    .hero-left .photo{width:100%;aspect-ratio:1/1;background:#eee;border-radius:18px;overflow:hidden;box-shadow:0 12px 36px rgba(11,61,145,0.06)}
+    .hero-left .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .hero-left .name{margin-top:12px;text-align:center}
+    .hero-left .name h2{font-size:20px;color:var(--main);margin:0}
+    .hero-left .name p{color:var(--muted);margin:6px 0 0}
+
+    .hero-right{flex:1;min-width:260px;background:var(--card);padding:22px;border-radius:14px;box-shadow:0 12px 36px rgba(2,6,23,0.04)}
+    .hero-right h2{margin:0 0 10px;font-size:22px}
+    .hero-right p{color:var(--muted);line-height:1.6}
+    .hero-right .actions{margin-top:16px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{background:var(--main);color:#fff;border-radius:10px;border:0;cursor:pointer;font-weight:700;}
+    .btn.secondary{background:#fff;color:var(--main);border:1px solid rgba(26,35,126,0.08)}
+    .btn{padding:7px 15px;text-decoration:none;font-size:13px;margin-top:10px;}
+    .button-coach{ text-decoration:none;font-size:13px; ; color: #fff; font-weight: bolder; border-radius: 10px;}
+
+    section{margin-top:26px}
+    .section-title{font-size:20px;color:var(--main);margin-bottom:14px}
+
+    .ebooks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.03)}
+    .thumb{width:150px;height:200px;border-radius:10px;object-fit:cover;box-shadow:0 10px 30px rgba(2,6,23,0.04)}
+    .ebook-row{display:flex;gap:14px;align-items:center}
+    .ebook-info h3{margin:0 0 6px;color:var(--main)}
+    .muted{color:var(--muted);font-size:14px;margin-bottom:15px}
+
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    .contact-list a{color:var(--main);text-decoration:none;font-weight:600}
+
+    .courses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .course-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 28px rgba(2,6,23,0.04)}
+    .course-card h3{margin:0;color:var(--main)}
+    .course-card p{color:var(--muted);line-height:1.6;margin-top:8px}
+    .course-card .btn{margin-top:14px}
+
+    footer{text-align:center;margin-top:28px;color:var(--muted);font-size:13px;padding:18px}
+
+    @media (max-width:880px){
+      nav{display:none;position:absolute;top:72px;right:16px;flex-direction:column;background:#fff;padding:12px;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.08)}
+      nav.show{display:flex}
+      .hamburger{display:block}
+      .hero{flex-direction:column;align-items:center}
+      .hero-right{width:100%}
+      .hero-left{width:200px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img src="circle prodile.jpg" style="border-radius:50%;border:2px solid #1a237e;padding:1px;">
+        <div><h1>Coach Musab</h1><div style="font-size:13px;color:var(--muted)">Public Speaking Coach | content strategist & creator</div></div>
+      </div>
+
+      <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#ebooks">E-books</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="menu">
+        <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="26" height="2" rx="1" fill="#1a237e"/><rect y="7" width="26" height="2" rx="1" fill="#1a237e"/><rect y="14" width="26" height="2" rx="1" fill="#1a237e"/></svg>
+      </button>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-left">
+        <div class="photo" style="border:1px solid #1a237e;padding:3px; height: 280px; width: 250px;"><img src="professional standing.jpg" alt="Musab" style="object-position:0 -40px;border-radius:10px;"></div>
+        <div class="name">
+          <h2>Musab Ibrahim</h2>
+          <p>Public Speaking Coach | content  strategist & creator</p>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <h2>U hadal si kalsooni leh. (Speak with confidence).</h2>
+        <p>waxan soo caawiyey ardey iyo xirfadlayaal si ay ugu hadlaan si kalsooni leh oo cabsidooda ay ka hortgaan. waan hubaa adna waad samenyn kartaa.</p>
+        <div class="actions">
+          <button class="btn" onclick="document.getElementById('ebooks').scrollIntoView({behavior:'smooth'})">Explore My Books</button>
+          <a href="#contact"><button class="btn secondary" style="border:1px solid #1a237e;">Book a Session</button></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-title">About Me</div>
+      <div class="card"><p style="color:var(--muted);line-height:1.7">
+        waxaan kaa caawinayaa inaad u hadasho si kalsooni leh. oo aan la iska indha tiri karin hadalkaada oo uu noqdo mid saameyn leh.
+      </p></div>
+    </section>
+
+    <section id="ebooks">
+      <div class="section-title">My E-books</div>
+      <div class="ebooks">
+        <div class="card">
+          <div class="ebook-row">
+            <img class="thumb" src="10ka xeer.png" alt="Free book">
+            <div class="ebook-info">
+              <h3>Free Book — 10ka xeer ee yareynta cabsida</h3>
+              <div class="muted">Waa xeerar kaa yareynaya cabsida fagaare ka hadalka.</div>
+              <div style="margin-top:10px">
+                <a href="https://drive.google.com/file/d/14MQvxxIfCOTg3b9EiwR3VagUwX7Xl9MS/view?usp=sharing" class="btn">Download Free</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="ebook-row">
+            <img class="thumb" src="p-r-p.png" alt="PRP method">
+            <div class="ebook-info">
+              <h3>PRP Method</h3>
+              <div class="muted">Deep, practical guide for confident public speaking.</div>
+              <p style="font-weight: bolder; font-size: 20px;  "> 2$ </p>
+              <!-- <div style="margin-top:15px">
+                <button id="viewDetailBtn" class="btn" style="background:#f4c542;color:#000">BUY NOW</button> -->
+                  <a href="prp.html" class="btn" style="background:var(--accent);color:#111">BUY NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+   
+
+    <section id="courses">
+      <div class="section-title">Courses & Coaching</div>
+      <div class="courses" >
+
+        <div class="course-card">
+          <img src="1.png" alt="" style="width: 100%; height: fit-content; border-radius: 10px;" >
+          <h3>5-6 week public speaking course — Group Class</h3>
+          <p>Haddii aadan weli si kalsooni leh u hadlin hortooda dadka, barnaamijkan waa fursadda aad iska lumin kari . Koox yar oo kuu dhisaysa kalsooni, kuu hagaajinaysa qaabeynta hadalka, oo kaa caawisa inaad si nadiif ah ugu hadasho goob kasta. Qof walba oo raba inuu ka muuqdo fursad kasta—tani waa meesha laga bilaabo.</p>
+          <p style="font-weight: bolder;">Waxaad baran doontaa:</p>
+          <ul>
+            <li> sida loo maareeyo cabsida</li>
+            <li>Sida loo diyaariyo khudbad & hadalkaada</li>
+            <li>Sida loo qaabeeyo hadalkaada</li>
+            <li>sida loogu soo jeediyo si saameyn leh </li>
+          </ul>
+          <p style="font-weight: bolder; color: black; font-size: 20px;">9.99$</p>
+
+                   <button class="whatspp"
+        data-message="Hello, waxaan u baahnaa public speaking course group class faahfaahin iga sii?."
+        style="background:#1a237e; width:100%; padding:7px; border:none; border-radius:5px; color:#fff; cursor:pointer; font-size:18px;">
+  <i class="fa-brands fa-whatsapp" style="font-size:21px; margin-right:5px;"></i>
+  Contact us
+</button>
+
+     
+        </div>
+
+        <div class="course-card">
+           <img src="2.png" alt="" style="width: 100%; height: fit-content; border-radius: 10px;" >
+          <h3>7-8 weeks One-on-One Coaching</h3>
+          <p>Tababar shaqsiyeed oo si gaar ah loogu talagalay yoolalkaaga hadalka oo kuu fududeynaya inaad u hadasho si kalsooni leh </p>
+          </p>
+          <p style="font-weight: bolder;">Waxaad heli doontaa:</p>
+          <ul>
+            <li> Falanqeyn gaar ah oo ku saabsan waxa aad ku wanaagsantahay iyo waxa ka maqan</li>
+            <li>Qorshe ku gaar ah oo aad ku gaareysid hadafkaada aad rabtid</li>
+            <li>La-socod joogto ah si aad u horumar degdeg ah u gaarto</li>
+            <li>Waxaad helaysaa tababar cod iyo sida loo hadlo si cad </li>
+          </ul>
+          <p style="font-weight: bolder; color: black; font-size: 20px;">16.99$</p>
+
+          <button class="whatspp"
+        data-message="Hello, waxaan u baahnaa one-one coaching faahfaahin iga sii?."
+        style="background:#f4c542; width:100%; padding:7px; border:none; border-radius:5px; color:#000; cursor:pointer; font-size:18px; font-weight:bolder;">
+  <i class="fa-brands fa-whatsapp" style="font-size:21px; margin-right:5px;"></i>
+  Contact us
+</button>
+
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="contact">
+      <div class="section-title">Contact</div>
+      <div class="card contact-list">
+        <div><strong>WhatsApp:</strong> <a href="https://wa.me/252683887140">+252 683887140</a></div>
+        <div><strong>Email:</strong> <a href="mailto:musab716255@gmail.com">musab716255@gmail.com</a></div>
+        <div style="margin-top:8px;color:var(--muted)">Tiktok: @caoch-musab</div>
+      </div>
+    </section>
+  </div>
+
+
+    <footer>© 2025 Musab — All rights reserved</footer>
+  </div>
+
+  <div id="bookModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;z-index:1000;">
+    <div style="background:#fff;padding:20px;border-radius:12px;max-width:500px;width:90%;text-align:left;position:relative;">
+      <h2>PRP Method — Coming Soon</h2>
+      <p>Buuggan waxaa si gaar ah loogu talagalay ardayda iyo bilowga ku cusub fagaare ka hadalka.</p>
+      <button id="closeModalBtn" class="btn" style="background:#d32f2f;color:#fff;">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const hamburger=document.getElementById('hamburger');
+
+    const  nav=document.getElementById('nav');hamburger.addEventListener('click',()=>nav.classList.toggle('show'));
+
+    const viewDetailBtn=document.getElementById('viewDetailBtn');const bookModal=document.getElementById('bookModal');
+    const closeModalBtn=document.getElementById('closeModalBtn');
+
+    // viewDetailBtn.addEventListener('click',()=>{bookModal.style.display="flex"});
+
+    closeModalBtn.addEventListener('click',()=>{bookModal.style.display="none"});
+
+    bookModal.addEventListener('click',e=>{if(e.target===bookModal){bookModal.style.display="none"}});
+
+
+
+
+ const buttons = document.querySelectorAll(".whatspp");
+const phone = "252683887140";
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const message = btn.dataset.message;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.location.href = url;
+  });
+});
+
+  </script>
+</body>
+</html>
